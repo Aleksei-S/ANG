@@ -1,0 +1,25 @@
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+
+body {
+}
+.container{
+	margin-top: 300px;
+	background-color: green;
+	max-width: 200px;
+	min-width: 200px;
+
+}
+.btn{
+max-width: 40px;
+min-width: 40px;
+/*display: inline-block;	*/
+}
+.row{
+padding: 5px;	
+}
+.col-xs-3{
+padding: 0px;
+}
