@@ -1,6 +1,6 @@
 elem = document.getElementById("elem");
 elem.focus();
-var operatorCONST ="";
+var operatorCONST = "";
 var result = makeResult ();    //объект 
 
 
@@ -48,14 +48,14 @@ function totalCalculate (firstNumber, operatorCONST, secondNumber){
   if (operatorCONST == "*") {
   firstNumber = firstNumber * secondNumber;
   } 
-  if (operatorCONST=="%") {
+  if (operatorCONST == "%") {
   firstNumber = firstNumber * secondNumber / 100;
   }
-  if (operatorCONST=="=") {
+  if (operatorCONST == "=") {
     result.refresh();
   }
 
-  firstNumber=+firstNumber.toFixed(10);
+  firstNumber =+ firstNumber.toFixed(10);
   return firstNumber;
 }
 
@@ -117,9 +117,9 @@ function checkNumber (value) {
 function changeSign (value) {
 
   if (elem.value.substr(0,1) == "-") {
-     elem.value=elem.value.substring(1);
+     elem.value = elem.value.substring(1);
   }else {
-    elem.value="-"+elem.value;
+    elem.value = "-" + elem.value;
   }
 
   result.refresh();
@@ -131,7 +131,7 @@ function refresh () {
 
   result.refresh();
   elem.value = "";
-  operatorCONST ="";
+  operatorCONST = "";
 }
 
 //ввод с клавиатуры
@@ -147,7 +147,7 @@ function keyPressKeyboard(e) {
     btnClickNumber (char);
   } else if (char == "*" || char == "/" || char == "+" || char == "-") {
    btnClickOperator (char);
-  } else if (char=="Enter" ) {
+  } else if (char == "Enter") {
    btnClickOperator ("=");
   } 
 
